@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/* リーリース時には消すこと!!! */
+* {
+  /* outline: 1px rgba(255, 0, 0, 0.8) solid; */
+}
+/* 変数の定義 */
+:root {
+  --max-content-width: 750px;
+  --min-content-width: 375px;
+}
+html {
+  scroll-behavior: smooth;
+  /* コンテンツ幅でのフォントサイズ */
+  font-size: clamp(1px, 1.11vw, 16px);
+}
+body {
+  max-width: var(--max-content-width);
+  min-width: var(--min-content-width);
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  aspect-ratio: 750/1624;
+  padding-top: clamp(1px, calc(525 / 750 * 100vw), 525px);
+  padding-left: clamp(1px, calc(50 / 750 * 100vw), 50px);
+  padding-right: clamp(1px, calc(50 / 750 * 100vw), 50px);
+
+  box-shadow: 0 0 8px rgba(33, 33, 33, 0.5);
+  background-image: url("../images/bck@2x.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+a {
+  transition: 0.3s;
+}
+a:hover {
+  /* opacity: 0.6; */
+}
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 560/315;
+}
+
+.panel-text {
+  height: auto;
+  margin-top: clamp(1px, calc(18 / 750 * 100vw), 18px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: clamP(1px, calc(27 / 750 * 100vw), 27px);
+}
+.tab-1_img {
+  width: calc(656 / 750 * 100vw);
+  max-width: 656px;
+}
+.tab-2_img {
+  width: calc(326 / 750 * 100vw);
+  max-width: 326px;
+}
+.tab-3_img {
+  width: calc(332 / 750 * 100vw);
+  max-width: 332px;
+}
+.btn-cta_img {
+  width: calc(659 / 750 * 100vw);
+  max-width: 659px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+a:hover .btn-cta_img{
+    filter:
+    hue-rotate(30deg)   /* 位相ずらし */
+    saturate(0.6)       /* 彩度↓ */
+    brightness(1.15)    /* 明度↑ */
+    contrast(0.9);      /* コントラスト少し↓ */
+}

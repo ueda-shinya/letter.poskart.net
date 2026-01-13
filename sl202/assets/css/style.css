@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/* 変数の定義 */
+:root {
+  --max-content-width: 750px;
+  --min-content-width: 375px;
+}
+html {
+  scroll-behavior: smooth;
+  /* コンテンツ幅でのフォントサイズ */
+  font-size: clamp(1px, 1.11vw, 16px);
+}
+body {
+  max-width: var(--max-content-width);
+  min-width: var(--min-content-width);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 8px rgba(33, 33, 33, 0.5);
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+a {
+  transition: 0.3s;
+}
+a:hover {
+  /* opacity: 0.6; */
+}
+a:hover .cta_img{
+    filter:
+    hue-rotate(30deg)   /* 位相ずらし */
+    saturate(0.6)       /* 彩度↓ */
+    brightness(1.15)    /* 明度↑ */
+    contrast(0.9);      /* コントラスト少し↓ */
+}
+.cta {
+  position: relative;
+}
+.fv-move {
+  display: block;
+  width: 87.6%;
+  height: auto;
+  aspect-ratio: 560/315;
+  position: absolute;
+  top: clamp(1px, calc(27 / 750 * 100vw), 27px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: clamp(1px, calc(23/750*100vw),23px) solid #fdea1d;
+  box-sizing:content-box;
+}
+.cta_img{
+  width: clamp(1px,calc(649/750*100vw),649px);
+  height: auto;
+  position: absolute;
+  left:50%;
+  transform:translateX(-50%);
+  transition: 0.3s;
+}
+.fv.cta_img{
+  top:clamp(1px,calc(478/750*100vw),478px);
+}
+.cta-01.cta_img{
+  top:clamp(1px,calc(300 /750*100vw),300px);
+}
+
+.cta-02.cta_img{
+  bottom:clamp(1px,calc(66 /750*100vw),66px);
+}
