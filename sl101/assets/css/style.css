@@ -67,15 +67,13 @@ a:hover .cta_img {
   bottom: clamp(1px, calc(66 / 750 * 100vw), 66px);
 }
 
-.cta-text-link_a {
-  width: 55%;
+.cta-yt{
+  width: 75.47%;
   height: auto;
-  aspect-ratio: 100/30;
+  aspect-ratio: 566/135;
   position: absolute;
-
-  top: clamp(1px, calc(648 / 750 * 100vw), 648px);
-  /* top:648px; */
+  bottom:clamp(1px, calc(88 / 750 * 100vw), 88px); 
+  /* bottom: 88px; */
   left: 50%;
   transform: translateX(-50%);
-  /* background-color: rgba(255, 0, 0, 0.5); */
 }
